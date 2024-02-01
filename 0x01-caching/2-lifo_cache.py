@@ -2,9 +2,7 @@
 """
 This module inherits from the Basecache class and is caching system
 """
-
-
-from modules.base_caching import BaseCaching
+BaseCaching = __import__("base_caching").BaseCaching
 
 
 class LIFOCache(BaseCaching):
