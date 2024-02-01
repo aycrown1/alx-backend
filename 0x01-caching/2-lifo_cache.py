@@ -19,7 +19,7 @@ class LIFOCache(BaseCaching):
         """
         Adds items to the Cache
         """
-        if key is not None or item is not None:
+        if key is not None item is not None:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 discard_item = list(self.cache_data.keys()).pop()
                 del self.cache_data[discard_item]
