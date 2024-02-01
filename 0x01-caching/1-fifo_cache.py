@@ -2,7 +2,7 @@
 """
 This module inherits from the Basecache class and is caching system
 """
-from modules.base_caching import BaseCaching
+BaseCaching = __import__("base_caching").BaseCaching
 
 
 class FIFOCache(BaseCaching):
@@ -19,7 +19,7 @@ class FIFOCache(BaseCaching):
         """
         Adds items to the Cache
         """
-        if key is not None or item is not None:
+        if key is not None and item is not None:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 last_item = list(self.cache_data.keys())[0]
                 del self.cache_data[last_item]
