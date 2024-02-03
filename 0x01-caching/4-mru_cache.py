@@ -2,7 +2,7 @@
 """
 This module inherits from the Basecache class and is caching system
 """
-BasicCaching = __import__('base_caching').BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class MRUCache(BaseCaching):
