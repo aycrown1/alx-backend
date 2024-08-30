@@ -3,7 +3,7 @@ import redis from 'redis';
 const client = redis.createClient();
 
 
-client.on('error', ('error', (err) => {
+client.on('error', (err) => {
     console.error(`Redis client not connected to the server: ${err}`);
 });
 
